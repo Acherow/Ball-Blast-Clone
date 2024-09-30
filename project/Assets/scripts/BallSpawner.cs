@@ -25,7 +25,7 @@ public class BallSpawner : MonoBehaviour
     public void spawn()
     {
         curtime = spawnTime;
-        bool side = Random.Range(0, 2) == 0? true : false;
+        bool side = Random.Range(0, 2) == 0;
         GameObject go = Instantiate(ballPrefab);
         go.transform.position = new Vector3(side?spawnDistance : -spawnDistance, -1, 0);
         go.GetComponent<Rigidbody2D>().velocity = new Vector2(side?-6:6, 7);

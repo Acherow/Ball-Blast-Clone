@@ -20,7 +20,7 @@ public class Ball : MonoBehaviour
     Rigidbody2D rb;
     Collider2D col;
 
-    float iframes = .2f;
+    float iframes = .3f;
 
     private void Start()
     {
@@ -54,14 +54,6 @@ public class Ball : MonoBehaviour
         if (hp <= 0)
         {
             die();
-        }
-    }
-
-    private void FixedUpdate()
-    {
-        if(rb.velocity.magnitude < .1f || rb.velocity.magnitude > 20f)
-        {
-            rb.velocity = (Vector2.up * 5) + (Vector2.right * Random.Range(-1f, 1) * 10);
         }
     }
 
